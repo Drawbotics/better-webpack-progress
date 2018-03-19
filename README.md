@@ -1,6 +1,6 @@
 # Better Webpack progress
 
-A callback function to pass to Webpack `ProgressPlugin` to get a nicer output.
+A callback function to pass to Webpack [`ProgressPlugin`](https://github.com/webpack/docs/wiki/internal-webpack-plugins#progresspluginhandler) to get a nicer output.
 
 
 ## Installation
@@ -33,16 +33,10 @@ module.exports = {
 
 ## Modes
 
-There are two modes for outputting progress info:
+There are two output modes:
 
-### Compact
-
-Is better suited for usage in a CLI during development. Reuses CLI lines when logging.
-
-
-### Detailed
-
-Is better suited for usage in a CI environment. Doesn't reuse CLI lines when logging.
+ - **compact**: Is better suited for usage in a CLI during development. Reuses CLI lines when logging.
+ - **detailed**: Is better suited for usage in a CI environment. Doesn't reuse CLI lines when logging.
 
 
 ## LICENSE
