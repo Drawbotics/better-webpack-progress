@@ -5,5 +5,11 @@
   "main": "src/index.js",
   "repository": "git@github.com:Drawbotics/better-webpack-progress.git",
   "author": "Lorenzo Ruiz <lars.bs@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cli-truncate": "^1.1.0",
+    "colors": "^1.2.1",
+    "figures": "^2.0.0",
+    "ora": "^2.0.0"
+  }
 }
