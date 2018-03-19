@@ -1,6 +1,6 @@
 {
   "name": "better-webpack-progress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A webpack progress formatter.",
   "main": "src/index.js",
   "repository": "git@github.com:Drawbotics/better-webpack-progress.git",
