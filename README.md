@@ -1,6 +1,6 @@
 # Better Webpack progress
 
-A callback function to pass to Webpack [`ProgressPlugin`](https://github.com/webpack/docs/wiki/internal-webpack-plugins#progresspluginhandler) to get a nicer output.
+A callback function to pass to Webpack [`ProgressPlugin`](https://github.com/webpack/docs/wiki/internal-webpack-plugins#progresspluginhandler) to get a nicer output. Heavily inspired by [dominique-mueller/simple-progress-webpack-plugin](https://github.com/dominique-mueller/simple-progress-webpack-plugin)
 
 
 ## Installation
