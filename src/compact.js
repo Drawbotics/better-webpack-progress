@@ -63,11 +63,17 @@ function parseModuleProgress(moduleProgress) {
 
 function getModulesMessage(moduleProgress, moduleName) {
   const modulesMessage = colors.grey.dim(`${figures.arrowRight} ${parseModuleProgress(moduleProgress)} :: ${getShortenedPath(moduleName)}`);
-  return cliTruncate(
-    (moduleProgress && moduleName) ? '\n  ' + modulesMessage : '',
-    process.stdout.columns,
-    { position: 'middle' },
-  );
+  
+  if (process.stdout.columns != null) {
+    return cliTruncate(
+      (moduleProgress && moduleName) ? '\n  ' + modulesMessage : '',
+      process.stdout.columns,
+      { position: 'middle' },
+    );
+  }
+  else {
+    return (moduleProgress && moduleName) ? '\n  ' + modulesMessage : '';
+  }
 }
 
 
