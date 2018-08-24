@@ -62,6 +62,9 @@ module.exports = function betterWebpackProgressBar(options) {
     if (percentage == 1) {
       logUpdate.clear();
       logUpdate.done();
+      if (options.customSummary) {
+        options.customSummary();
+      }
     }
   };
 }
