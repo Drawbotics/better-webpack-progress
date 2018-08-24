@@ -1,4 +1,4 @@
-const colors = require('colors');
+const chalk = require('chalk');
 const figures = require('figures');
 const cliTruncate = require('cli-truncate');
 
@@ -47,7 +47,7 @@ function getShortenedPath(moduleName) {
 
 
 function initialMessage() {
-  console.log(colors.grey.bold('Webpack starting...'))
+  console.log(chalk.grey.bold('Webpack starting...'))
 }
 
 
@@ -94,7 +94,7 @@ module.exports = function betterWebpackProgressCompact(options) {
     if (newMessage === latestMessage) {
       const logMessage = getLogMessage(percentage, message, moduleProgress, moduleName);
       if (logMessage) {
-        console.log(colors.grey.dim(truncate(logMessage)));
+        console.log(chalk.grey.dim(truncate(logMessage)));
       }
     }
     else if (percentage === 1 && newMessage) {
@@ -106,7 +106,7 @@ module.exports = function betterWebpackProgressCompact(options) {
       }
       const logMessage = getLogMessage(percentage, message, moduleProgress, moduleName);
       if (logMessage) {
-        console.log(colors.grey.dim(truncate(logMessage)));
+        console.log(chalk.grey.dim(truncate(logMessage)));
       }
     }
     latestMessage = newMessage;

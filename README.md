@@ -17,14 +17,14 @@ $ yarn add --dev better-webpack-progress
 This package is designed to be used with the default Webpack `ProgressPlugin`.
 
 ```javascript
-const ProgressPlugin = require('webpack/lib/ProgressPlugin');
+const webpack = require('webpack');
 const betterProgress = require('better-webpack-progress');
 
 module.exports = {
   // ... rest of Webpack config
   plugins: [
-    new ProgressPlugin(betterProgress({
-      mode: 'compact',  // or 'detailed'
+    new webpack.ProgressPlugin(betterProgress({
+      mode: 'compact',  // or 'detailed' or 'bar'
     })),
   ]
   // ... rest of Webpack config
@@ -33,9 +33,10 @@ module.exports = {
 
 ## Modes
 
-There are two output modes:
+There are three output modes:
 
- - **compact**: Is better suited for usage in a CLI during development. Reuses CLI lines when logging.
+ - **compact**: Is better suited for usage during development. Reuses CLI lines when logging.
+ - **bar**: Is better suited for usage during development. Reuses CLI lines when logging.
  - **detailed**: Is better suited for usage in a CI environment. Doesn't reuse CLI lines when logging.
 
 

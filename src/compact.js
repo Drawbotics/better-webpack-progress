@@ -1,4 +1,4 @@
-const colors = require('colors');
+const chalk = require('chalk');
 const figures = require('figures');
 const ora = require('ora');
 const cliTruncate = require('cli-truncate');
@@ -48,7 +48,7 @@ function getShortenedPath(moduleName) {
 
 
 function initialMessage() {
-  console.log(colors.grey.bold('Webpack starting...'))
+  console.log(chalk.grey.bold('Webpack starting...'))
 }
 
 
@@ -62,8 +62,8 @@ function parseModuleProgress(moduleProgress) {
 
 
 function getModulesMessage(moduleProgress, moduleName) {
-  const modulesMessage = colors.grey.dim(`${figures.arrowRight} ${parseModuleProgress(moduleProgress)} :: ${getShortenedPath(moduleName)}`);
-  
+  const modulesMessage = chalk.grey.dim(`${figures.arrowRight} ${parseModuleProgress(moduleProgress)} :: ${getShortenedPath(moduleName)}`);
+
   if (process.stdout.columns != null) {
     return cliTruncate(
       (moduleProgress && moduleName) ? '\n  ' + modulesMessage : '',
